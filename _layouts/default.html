@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% seo %}
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url}}">
+    <link rel="manifest" href="{{ "/assets/site.webmanifest" | absolute_url}}">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+    {% capture critical %}
+      {% include critical.scss %}
+    {% endcapture %}
+    {{ critical | scssify }}
+    </style>
+    {% for style in page.styles %}
+    <link rel="stylesheet" href="{{ style | prepend: "/assets/css/" | append: ".css" | absolute_url }}">
+    {% endfor %}
+    <script src="https://unpkg.com/pdfjs-dist@latest/build/pdf.min.js" async></script> 
+    <script src="https://unpkg.com/pdf-lib@latest/dist/pdf-lib.min.js" async></script> 
+    <script src="https://unpkg.com/sortablejs@latest/Sortable.min.js" async></script>
+    <script src="https://unpkg.com/downloadjs@latest/download.min.js" async></script>
+    {% for script in page.scripts %}
+    <script src="{{ script | prepend: "/assets/js/" | append: ".js" | absolute_url }}" async></script>
+    {% endfor %}
+  </head>
+  <body>
+    <div class="ui_header">
+      <a href="#sidenav" class="btn_menu"></a>
+      <div class="ui_logo">pdfVise</div>
+    </div>
+    <hr/>
+    <div id="sidenav">
+      <a href="#" id="sidenav-close" class="ui_nav"></a>
+      <hr/>
+      <a href="{{ "/pdf-merge" | absolute_url }}" class="ui_nav">Merge PDF</a>
+      <a href="{{ "/pdf-rotate" | absolute_url }}" class="ui_nav">Rotate PDF</a>
+      <a href="{{ "/pdf-sort" | absolute_url }}" class="ui_nav">Sort PDF</a>
+      <a href="{{ "/pdf-combine" | absolute_url }}" class="ui_nav">Combine PDF Pages</a>
+      <a href="{{ "/pdf-remove" | absolute_url }}" class="ui_nav">Remove PDF Pages</a>
+      <hr/>
+      <a href="{{ "/pdf-to-jpg" | absolute_url }}" class="ui_nav">PDF to JPG</a>
+      <a href="{{ "/jpg-to-pdf" | absolute_url }}" class="ui_nav">JPG to PDF</a>
+      <hr/>
+    </div>
+    {{ content }}
+  </body>
+</html>

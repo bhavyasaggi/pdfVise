@@ -1,0 +1,23 @@
+@import "global";
+
+* { 
+  box-sizing: border-box; 
+  font-family: monospace; 
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+}
+
+details summary::-webkit-details-marker { 
+  display:none;
+}
+
+@keyframes loading {
+  100% { transform: rotate(360deg) }
+}
+
+[hidden] { 
+  display: none; 
+}
