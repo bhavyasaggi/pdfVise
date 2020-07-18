@@ -209,6 +209,9 @@
   &:target {
     transform: translateX(0);
   }
+  .ui_logo {
+    margin: 5px auto;
+  }
 }
 
 #sidenav-close {
