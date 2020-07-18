@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#cccccc">
     {% seo %}
     <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url}}">
+    <link rel="apple-touch-icon" href="{{ "/assets/images/apple-touch-icon.png" | absolute_url}}">
     <link rel="manifest" href="{{ "/assets/site.webmanifest" | absolute_url}}">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
@@ -37,11 +39,9 @@
       <a href="{{ "/pdf-merge" | absolute_url }}" class="ui_nav">Merge PDF</a>
       <a href="{{ "/pdf-rotate" | absolute_url }}" class="ui_nav">Rotate PDF</a>
       <a href="{{ "/pdf-sort" | absolute_url }}" class="ui_nav">Sort PDF</a>
-      <a href="{{ "/pdf-combine" | absolute_url }}" class="ui_nav">Combine PDF Pages</a>
-      <a href="{{ "/pdf-remove" | absolute_url }}" class="ui_nav">Remove PDF Pages</a>
-      <hr/>
-      <a href="{{ "/pdf-to-jpg" | absolute_url }}" class="ui_nav">PDF to JPG</a>
-      <a href="{{ "/jpg-to-pdf" | absolute_url }}" class="ui_nav">JPG to PDF</a>
+      <a href="{{ "/pdf-combine-pages" | absolute_url }}" class="ui_nav">Combine PDF Pages</a>
+      <a href="{{ "/pdf-remove-pages" | absolute_url }}" class="ui_nav">Remove PDF Pages</a>
+      <a href="{{ "/pdf-rotate-pages" | absolute_url }}" class="ui_nav">Rotate PDF Pages</a>
       <hr/>
     </div>
     {{ content }}

@@ -175,10 +175,15 @@ Object.assign(ManipPDF.prototype,{
     var pdfThumbs = document.querySelectorAll('.ui_thumbwrap');
     for(var i = 0; i < pdfThumbs.length; i+=1) {
       var pdfThumbData = pdfThumbs[i].dataset;
-      var pdfThumbMeta = this.pdfMeta[pdfThumbData.id];
       pdfRotations.push(pdfThumbData.rotIndex);
       pdfPromises.push(
-        fetch(pdfThumbMeta.url).then(res=>res.arrayBuffer()).then(pdfBytes => window.PDFLib.PDFDocument.load(pdfBytes))
+        fetch(this.pdfMeta[pdfThumbData.id].url)
+          .then(function(res){
+            return res.arrayBuffer()
+          })
+          .then(function(pdfBytes){
+            return window.PDFLib.PDFDocument.load(pdfBytes)
+          })
       );
     }
     Promise.all(pdfPromises).then(function(pdfFiles){
