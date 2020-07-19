@@ -7,11 +7,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  &:before, &:after {
-    content: '';
-    display: block;
-    padding: 2px;
-  }
 }
 
 .ui_thumbwrap {

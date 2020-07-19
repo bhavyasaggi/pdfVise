@@ -199,8 +199,6 @@ Object.assign(ManipPDF.prototype,{
       }
     );
 
-
-
     Promise
       .all(pdfPromises)
       .then(function(pdfs){
@@ -234,7 +232,9 @@ Object.assign(ManipPDF.prototype,{
       .then(function(pdfDest) {
         pdfOrder.forEach(function(pdfMeta){
           var newPage = pdfMap[pdfMeta.id]["_"+pdfMeta.page];
-          pdfDest.addPage()
+          if(newPage) {
+            pdfDest.addPage(newPage);
+          }          
         });
         return pdfDest.save();
       })
