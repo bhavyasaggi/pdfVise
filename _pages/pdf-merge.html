@@ -14,24 +14,24 @@ scripts: [guide, merge]
   <div class="ui_thumb" id="thumbSelect"></div>
   <div class="ui_intro">
     <details open>
-    <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" height="48" width="48" loading="lazy"/><br/>Merge PDFs online</summary>
+    <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" alt="help" height="48" width="48" loading="lazy"/><br/>Merge PDFs online</summary>
     pdfVise immediately combines multiple PDF files into a single PDF file without any upload or waiting.
     </details>
     <details open>
-    <summary><img src="{{"/assets/icons/shield.svg" | absolute_url}}" height="48" width="48" loading="lazy"/><br/>Secure PDF merging</summary>
+    <summary><img src="{{"/assets/icons/shield.svg" | absolute_url}}" alt="secure" height="48" width="48" loading="lazy"/><br/>Secure PDF merging</summary>
     No files are uploaded to secondary location.
     <br/>
     All processing happens in your browser only, through the magic of JavaScript.
     </details>
     <details open>
-    <summary><img src="{{"/assets/icons/alert-circle.svg" | absolute_url}}" height="48" width="48" loading="lazy"/><br/>Platform Independent</summary>
+    <summary><img src="{{"/assets/icons/alert-circle.svg" | absolute_url}}" alt="alert" height="48" width="48" loading="lazy"/><br/>Platform Independent</summary>
     Works for Windows, Mac, Linux, & all Mobile environments.
     <br/>
     You only need a latest JavaScript-enabled Browser. No Installation necessary.
     </details>
   </div>
   <div class="ui_source">
-    <input type="file" id="inputFile" accept="application/pdf" multiple/>
+    <input type="file" aria-label="Source File" id="inputFile" accept="application/pdf" multiple/>
   </div>
   <div class="ui_process" id="processFile"></div>      
 </div>

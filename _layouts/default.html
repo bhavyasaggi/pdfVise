@@ -26,15 +26,17 @@
     {% for script in page.scripts %}
     <script src="{{ script | prepend: "/assets/js/" | append: ".js" | absolute_url }}" async></script>
     {% endfor %}
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-172950971-1" async></script>
+    <script data-ad-client="ca-pub-9266276505427619" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
   </head>
   <body>
     <div class="ui_header">
-      <a href="#sidenav" class="btn_menu"></a>
+      <a href="#sidenav" class="btn_menu" aria-label="Open Menu"></a>
       <div class="ui_logo">pdfVise</div>
     </div>
     <hr/>
     <div id="sidenav">
-      <a href="#" id="sidenav-close" class="ui_nav"></a>
+      <a href="#" id="sidenav-close" class="ui_nav" aria-label="Close Menu"></a>
       <hr/>
       <div class="ui_logo">pdfVise</div>
       <hr/>
@@ -47,5 +49,11 @@
       <hr/>
     </div>
     {{ content }}
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-172950971-1');
+    </script>
   </body>
 </html>
