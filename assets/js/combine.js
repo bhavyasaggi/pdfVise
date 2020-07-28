@@ -154,6 +154,7 @@ Object.assign(ManipPDF.prototype,{
             { handle: '.handle' }
           );
           that.processWrap.dataset.state = that.loadingState = 0;
+          document.getElementById(that.idInputProcess).parentElement.classList.add('active');
         });
     });    
   },

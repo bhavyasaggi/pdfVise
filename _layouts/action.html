@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>    
+    <style>{%- capture action -%}{%- include action.scss -%}{%- endcapture -%}{{- action | scssify -}}</style>
+    <link rel="stylesheet" href="{{ "/assets/css/action.css" | absolute_url }}">
+    <script src="https://unpkg.com/pdfjs-dist@latest/build/pdf.min.js" async></script> 
+    <script src="https://unpkg.com/pdf-lib@latest/dist/pdf-lib.min.js" async></script> 
+    <script src="https://unpkg.com/sortablejs@latest/Sortable.min.js" async></script>
+    <script src="https://unpkg.com/downloadjs@latest/download.min.js" async></script>    
+    {% include head.html %}     
+  </head>
+  <body>
+    {% include header.html %}
+    {% include nav.html %}
+    {{ content }}    
+  </body>
+</html>

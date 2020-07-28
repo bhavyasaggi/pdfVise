@@ -1,5 +1,6 @@
 ---
 ---
+"use strict";
 function ManipPDF(meta) {
   this.pdfMeta = {};
   this.loadingState = 0;
@@ -39,6 +40,7 @@ Object.assign(ManipPDF.prototype,{
       this.viewControl, { handle: '.handle' }
     );
     this.processWrap.dataset.state = this.loadingState = 0;
+    document.getElementById(this.idInputProcess).parentElement.classList.add('active');
   },
   pageHandler: function(event) {
     const dataset = event.currentTarget.dataset;

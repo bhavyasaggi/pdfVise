@@ -1,5 +1,8 @@
+desktop.ini
+vendor
+node_modules
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+.sublime

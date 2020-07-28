@@ -2,16 +2,16 @@
 title: pdfVise - Combine PDF files online for free.
 description: Combine PDF files & pages online, without uploading, with no watermarks, completely free!. Combine PDF pages easily on your browser only! No upload required!
 permalink: /pdf-combine-pages
-layout: default
-styles: [combine]
-scripts: [guide, combine]
+layout: action
+styles: [action]
+scripts: [combine]
 ---
-<div class="ui_guide">
-  <div class="guide_step1">Click here, & choose the PDFs you wish to combine.</div>
-  <div class="guide_step2">Click here to save the combined PDF.</div>
+<div class="heading auto-container">
+  <h1>Combine PDF Pages</h1>
+  Combine multiple pages of a PDF file or multiple PDF pages together.
 </div>
-<div class="ui_wrap" id="processWrap">
-  <div class="ui_thumb" id="thumbSelect"></div>
+<div class="ui_wrap auto-container" id="processWrap">
+  {% include action.html attr="multiple" %}
   <div class="ui_intro">
     <details open>
     <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" alt="help" height="48" width="48" loading="lazy"/><br/>Combine PDFs online</summary>
@@ -30,10 +30,6 @@ scripts: [guide, combine]
     You only need a latest JavaScript-enabled Browser. No Installation necessary.
     </details>
   </div>
-  <div class="ui_source">
-    <input type="file" aria-label="Source File" id="inputFile" accept="application/pdf" multiple>
-  </div>
-  <div class="ui_process" id="processFile"></div>      
 </div>
 <div class="ui_loading"></div>
 <hr/>
