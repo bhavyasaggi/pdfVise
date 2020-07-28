@@ -68,6 +68,7 @@ Object.assign(ManipPDF.prototype,{
       }
     );
     this.processWrap.dataset.state = this.loadingState = 0;
+    document.getElementById(this.idInputProcess).parentElement.classList.add('active');
   },
   renderThumb: function(page) {
     var vp = page.getViewport({scale: 1})

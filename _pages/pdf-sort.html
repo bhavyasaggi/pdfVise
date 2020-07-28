@@ -6,8 +6,12 @@ layout: action
 styles: [action]
 scripts: [sort]
 ---
-<div class="ui_wrap" id="processWrap">
-  <div class="ui_thumb" id="thumbSelect"></div>
+<div class="heading auto-container">
+  <h1>Sort PDF</h1>
+  Sort, Re-order an entire PDF file or multiple PDF files together.
+</div>
+<div class="ui_wrap auto-container" id="processWrap">
+  {% include action.html attr="multiple" %}
   <div class="ui_intro">
     <details open>
     <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" alt="help" height="48" width="48" loading="lazy"/><br/>Sort PDFs online</summary>
@@ -26,10 +30,6 @@ scripts: [sort]
     You only need a latest JavaScript-enabled Browser. No Installation necessary.
     </details>
   </div>
-  <div class="ui_source">
-    <input type="file" aria-label="Source File" id="inputFile" accept="application/pdf">
-  </div>
-  <div class="ui_process" id="processFile"></div>      
 </div>
 <div class="ui_loading"></div>
 <hr/>
