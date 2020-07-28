@@ -1,0 +1,110 @@
+* { 
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+  background-color: #fefbf8;
+}
+
+hr {
+  margin: 0px;
+  padding: 0px;
+}
+
+details summary::-webkit-details-marker { 
+  display:none;
+}
+
+[hidden] { 
+  display: none; 
+}
+
+.auto-container {
+  margin: auto;
+  max-width: 1024px;
+  padding: 8px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.pg_header {
+  margin-bottom: 8px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px 0px #000000;
+}
+
+.ui_header {
+  display: grid;
+  grid-template-columns: auto 64px;
+  grid-template-rows: 64px;
+}
+
+.ui_logo {
+  align-self: center;
+}
+
+.ui_nav {
+  display: inline-block;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 4px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.ui_footer {        
+  padding-bottom: 128px;
+}
+
+.btn_menu {
+  display: inline-block;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLW1lbnUiPjxsaW5lIHgxPSIzIiB5MT0iMTIiIHgyPSIyMSIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSI2IiB4Mj0iMjEiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSIxOCIgeDI9IjIxIiB5Mj0iMTgiPjwvbGluZT48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px;
+}
+
+#sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 256px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px #333;
+  z-index: 4;
+  transform: translateX(150%);
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:target {
+    transform: translateX(0);
+  }
+  .ui_logo {
+    margin: 5px auto;
+  }
+}
+
+#sidenav-close {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXgiPjxsaW5lIHgxPSIxOCIgeTE9IjYiIHgyPSI2IiB5Mj0iMTgiPjwvbGluZT48bGluZSB4MT0iNiIgeTE9IjYiIHgyPSIxOCIgeTI9IjE4Ij48L2xpbmU+PC9zdmc+");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+}

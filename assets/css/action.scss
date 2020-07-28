@@ -1,43 +1,28 @@
 ---
 ---
-.ui_thumb {
-  position: relative;
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  &:before, &:after {
-    content: '';
-    display: block;
-    padding: 2px;
-  }
-}
-
 .ui_thumbwrap {
   position: relative;
-  display: inline-grid;
+  display: inline-grid;  
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 128px auto;
   margin: 4px;
   padding: 4px;
-  height: 228px;
-  width: 172px;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 24px 24px 132px 40px;
+  height: 172px;
+  width: 172px;  
   background-color: #eee;
   white-space: nowrap;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px 0px #999;
-  & >* {    
+  box-shadow: 0px 0px 20px 0px #999;  
+  >* {    
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-  & canvas {
+  }  
+  canvas {
     display: block;
-    margin: auto;        
-    grid-row: 3 / 4;
-    grid-column: 1 / 5;
+    margin: auto;
     transition: transform 0.2s linear;
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
   }
   &:before {
     content: '';
@@ -56,22 +41,32 @@
     transition: background-color 0.2s ease-in-out;
     z-index: 1;
   }
-  &.disabled:before { 
-    display:flex; 
-    background-color: #F44336CC;
-  }
   &:after { 
     content: attr(data-page); 
     position: absolute; 
-    bottom: 4px; 
-    right: 4px;
+    top: 4px;
+    left: 4px;
     font-size: 12px;
     font-family: monospace;
     color: #333;
   }
-  &:hover {
-    .handle, .status, .rotLeft, .rotRight {
-      display: inline-flex;
+  &.disabled:before { 
+    display:flex; 
+    background-color: #F44336CC; 
+  }
+  .ui_thumb.meta & {
+    margin: 4px;
+    padding: 4px;
+    height: 228px;
+    width: 172px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 24px 24px 132px 40px;
+    canvas {
+      display: block;
+      margin: auto;        
+      grid-row: 3 / 4;
+      grid-column: 1 / 5;
+      transition: transform 0.2s linear;
     }
   }
 }
@@ -84,7 +79,20 @@
   justify-content: center;
 }
 
-.handle, .rotLeft, .rotRight, .status {
+.rot-0 canvas {
+  transform: rotate(0deg);
+}
+.rot-1 canvas {
+  transform: rotate(90deg);
+}
+.rot-2 canvas {
+  transform: rotate(180deg);
+}
+.rot-3 canvas {
+  transform: rotate(-90deg);
+}
+
+.handle, .status, .rotLeft, .rotRight {  
   position: relative;
   display: inline-flex;
   margin: 4px;

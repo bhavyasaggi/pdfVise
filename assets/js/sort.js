@@ -1,5 +1,6 @@
 ---
 ---
+"use strict";
 function ManipPDF(meta) {
   this.pdfDoc = null;
   this.pdfBlobUrl = '';

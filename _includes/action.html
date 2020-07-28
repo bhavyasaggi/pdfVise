@@ -1,0 +1,8 @@
+<div class="ui_source">
+  <input type="file" aria-label="Source File" id="inputFile" accept="application/pdf" {{ include.attr }}/>
+</div>
+<div class="ui_action">    
+  <a href="{{ page.url | absolute_url }}" class="btn_action btn_reload">Reload</a>
+  <div class="btn_action btn_process" id="processFile">Process & Save</div>
+</div>
+<div class="ui_thumb meta" id="thumbSelect"></div>
