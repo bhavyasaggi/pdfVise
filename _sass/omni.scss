@@ -1,6 +1,8 @@
 * { 
   box-sizing: border-box;
+  color: #333;
   outline: none;
+  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -13,6 +15,13 @@ body {
 hr {
   margin: 0px;
   padding: 0px;
+  opacity: 0.4;
+}
+
+img {
+  margin: 8px;
+  vertical-align: middle;
+  object-fit: contain;
 }
 
 details summary::-webkit-details-marker { 
@@ -33,6 +42,13 @@ details summary::-webkit-details-marker {
   text-align: center;
 }
 
+.subtitle {
+  color: #666;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 .pg_header {
   margin-bottom: 8px;
   width: 100%;
@@ -50,8 +66,45 @@ details summary::-webkit-details-marker {
   align-self: center;
 }
 
+.ui_aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  >* {
+    margin: 8px;
+    width: 250px;
+    border: 1px dashed #999;
+    padding: 8px;
+    background-color: #fff;
+  }
+  img {
+    margin: 8px;
+  }
+}
+
 .ui_footer {        
-  padding-bottom: 128px;
+  
+}
+
+.ui_intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 16px;
+  img {
+    margin: 8px;
+  }
+  details{
+    width: 30%;
+    padding: 8px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  summary {
+    margin: 8px 0px;    
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 .btn_menu {
@@ -92,9 +145,6 @@ details summary::-webkit-details-marker {
     text-decoration: none;
     color: #333;
   }
-  img {
-    object-fit: contain;
-  }
 }
 
 #sidenav-close {
@@ -106,4 +156,10 @@ details summary::-webkit-details-marker {
   background-position: center;
   background-repeat: no-repeat;
   align-self: flex-end;
+}
+
+@media(max-width: 1024px) {
+  .ui_intro details, .ui_blocks >* {
+    width: 100%;
+  }
 }

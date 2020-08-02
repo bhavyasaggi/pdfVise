@@ -1,0 +1,34 @@
+# pdfVise -  online for free.
+# without uploading, with no watermarks, completely free!
+# easily on your browser only! No upload required!
+# into a single downloadable PDF file.
+combine:
+  icon: "/assets/icons/clipboard.svg"
+  title: "Combine PDF Pages"
+  subtitle: "Combine multiple pages of a PDF file or multiple PDF pages together"
+  link: "/pdf-combine-pages"
+merge:
+  icon: "/assets/icons/copy.svg"
+  title: "Merge PDF"
+  subtitle: "Merge multiple PDF files together"
+  link: "/pdf-merge"
+remove:
+  icon: "/assets/icons/scissors.svg"
+  title: "Remove PDF Pages"
+  subtitle: "Remove multiple pages from a PDF file"
+  link: "/pdf-remove-pages"
+reorder:
+  icon: "/assets/icons/sliders.svg"
+  title: "Reorder PDF"
+  subtitle: "Reorder pages of a PDF file in any order"
+  link: "/pdf-reorder"
+rotate:
+  icon: "/assets/icons/refresh-cw.svg"
+  title: "Rotate PDF"
+  subtitle: "Rotate an entire PDF file or multiple PDF files together."
+  link: "/pdf-rotate"
+rotate_pages:
+  icon: "/assets/icons/refresh-ccw.svg"
+  title: "Rotate PDF Pages"
+  subtitle: "Rotate multiple or individual pages of a PDF file"
+  link: "/pdf-rotate-pages"

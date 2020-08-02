@@ -7,30 +7,40 @@ styles: [action]
 scripts: [combine]
 ---
 <div class="heading auto-container">
-  <h1>Combine PDF Pages</h1>
-  Combine multiple pages of a PDF file or multiple PDF pages together.
+  <h1>
+    <img src="{{ site.data.type.combine.icon | absolute_url }}" alt="Combine PDF" height="48" width="48" loading="lazy"/>
+    {{ site.data.type.combine.title }}
+  </h1>
+  {{ site.data.type.combine.subtitle }}
 </div>
 <div class="ui_wrap auto-container" id="processWrap">
   {% include action.html attr="multiple" %}
-  <div class="ui_intro">
-    <details open>
-    <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" alt="help" height="48" width="48" loading="lazy"/><br/>Combine PDFs online</summary>
-    pdfVise immediately combines multiple PDF files into a new PDF file by manipulating pages and without any upload or waiting.
-    </details>
-    <details open>
-    <summary><img src="{{"/assets/icons/shield.svg" | absolute_url}}" alt="secure" height="48" width="48" loading="lazy"/><br/>Secure PDF Combining</summary>
-    No files are uploaded to secondary location.
-    <br/>
-    All processing happens in your browser only, through the magic of JavaScript.
-    </details>
-    <details open>
-    <summary><img src="{{"/assets/icons/alert-circle.svg" | absolute_url}}" alt="alert" height="48" width="48" loading="lazy"/><br/>Platform Independent</summary>
-    Works for Windows, Mac, Linux, & all Mobile environments.
-    <br/>
-    You only need a latest JavaScript-enabled Browser. No Installation necessary.
-    </details>
-  </div>
 </div>
 <div class="ui_loading"></div>
-<hr/>
-<div class="ui_footer"></div>
+<br/><hr/><br/>
+<div class="ui_how auto-container">
+  <img src="{{ '/assets/icons/info.svg' | absolute_url }}" alt="Combine PDF" height="128" width="128" loading="lazy"/>
+  <details open>
+    <summary>How to {{ site.data.type.combine.title }} ?</summary>
+    <ol>
+      <li>
+        Select and add all the PDF files whose pages are to be combined,
+        <div class="subtitle">(by clicking or dragging the files into the area above.)</div>
+      </li>
+      <li>
+        Re-select to add more PDF files or pages to be combined in your current selection.
+      </li>
+      <li>
+        Modify the Pages by
+        <ol>
+          <li>Re-ordering <span class="subtitle">(by dragging and droping at custom position)</span></li>
+          <li>Rotating <span class="subtitle">(in any direction)</span></li>
+          <li>Removing <span class="subtitle">(or disabling)</span></li>
+        </ol>
+      </li>
+      <li>
+        Process & Save the generated PDF file to your computer.
+      </li>
+    </ol>
+  </details>
+</div>
