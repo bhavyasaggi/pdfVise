@@ -2,14 +2,14 @@
   <br/>
   <a href="#" id="sidenav-close" aria-label="Close Menu"></a>
   <br/>
-  <img src="{{ "/assets/images/logo.jpg" | absolute_url }}" height="48" width="auto"/>
+  <img src="{{ "/assets/images/logo.jpg" | absolute_url }}" height="48" width="auto" alt="PDFvise Logo"/>
   <br/>
   <br/>
-  <a href="{{ "/pdf-merge" | absolute_url }}">Merge PDF</a>
-  <a href="{{ "/pdf-rotate" | absolute_url }}">Rotate PDF</a>
-  <a href="{{ "/pdf-sort" | absolute_url }}">Sort PDF</a>
+  <a href="{{ site.data.type.merge.link | absolute_url }}">{{ site.data.type.merge.title }}</a>
+  <a href="{{ site.data.type.rotate.link | absolute_url }}">{{ site.data.type.rotate.title }}</a>
+  <a href="{{ site.data.type.reorder.link | absolute_url }}">{{ site.data.type.reorder.title }}</a>
   <br/>
-  <a href="{{ "/pdf-combine-pages" | absolute_url }}">Combine PDF Pages</a>
-  <a href="{{ "/pdf-remove-pages" | absolute_url }}">Remove PDF Pages</a>
-  <a href="{{ "/pdf-rotate-pages" | absolute_url }}">Rotate PDF Pages</a>
+  <a href="{{ site.data.type.combine.link | absolute_url }}">{{ site.data.type.combine.title }}</a>
+  <a href="{{ site.data.type.rotate_pages.link | absolute_url }}">{{ site.data.type.rotate_pages.title }}</a>
+  <a href="{{ site.data.type.remove.link | absolute_url }}">{{ site.data.type.remove.title }}</a>
 </nav>

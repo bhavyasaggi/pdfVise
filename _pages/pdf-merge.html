@@ -7,30 +7,40 @@ styles: [action]
 scripts: [merge]
 ---
 <div class="heading auto-container">
-  <h1>Merge PDF</h1>
-  Merge PDF files into a single PDF.
+  <h1>
+    <img src="{{ site.data.type.merge.icon | absolute_url }}" alt="secure" height="48" width="48" loading="lazy"/>
+    {{ site.data.type.merge.title }}
+  </h1>
+  {{ site.data.type.merge.subtitle }}
 </div>
 <div class="ui_wrap auto-container" id="processWrap">  
   {% include action.html attr="multiple" %}
-  <div class="ui_intro">
-    <details open>
-    <summary><img src="{{"/assets/icons/help-circle.svg" | absolute_url}}" alt="help" height="48" width="48" loading="lazy"/><br/>Merge PDFs online</summary>
-    pdfVise immediately combines multiple PDF files into a single PDF file without any upload or waiting.
-    </details>
-    <details open>
-    <summary><img src="{{"/assets/icons/shield.svg" | absolute_url}}" alt="secure" height="48" width="48" loading="lazy"/><br/>Secure PDF merging</summary>
-    No files are uploaded to secondary location.
-    <br/>
-    All processing happens in your browser only, through the magic of JavaScript.
-    </details>
-    <details open>
-    <summary><img src="{{"/assets/icons/alert-circle.svg" | absolute_url}}" alt="alert" height="48" width="48" loading="lazy"/><br/>Platform Independent</summary>
-    Works for Windows, Mac, Linux, & all Mobile environments.
-    <br/>
-    You only need a latest JavaScript-enabled Browser. No Installation necessary.
-    </details>
-  </div>
 </div>
 <div class="ui_loading"></div>
-<hr/>
-<div class="ui_footer"></div>
+<br/><hr/><br/>
+<div class="ui_how auto-container">
+  <img src="{{ '/assets/icons/info.svg' | absolute_url }}" alt="Combine PDF" height="128" width="128" loading="lazy"/>
+  <details open>
+    <summary>How to {{ site.data.type.merge.title }} ?</summary>
+    <ol>
+      <li>
+        Select and add all the PDF files to be merged together,
+        <div class="subtitle">(by clicking or dragging the files into the area above.)</div>
+      </li>
+      <li>
+        Re-select to add more PDF files to be merged into your current selection.
+      </li>
+      <li>
+        Modify the PDF file section by
+        <ol>
+          <li>Re-ordering <span class="subtitle">(by dragging and droping at custom position)</span></li>
+          <li>Rotating <span class="subtitle">(in landscape or portrait mode)</span></li>
+          <li>Removing</li>
+        </ol>
+      </li>
+      <li>
+        Process & Save the merged PDF file to your computer.
+      </li>
+    </ol>
+  </details>
+</div>

@@ -105,23 +105,20 @@
   flex-wrap: wrap;
 }
 
-.ui_intro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  details{
-    width: 30%;
-    padding: 8px;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
+.ui_how {
+  display: flex;  
+  line-height: 1.8;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  img {
+    opacity: 0.3;
   }
   summary {
-    margin: 8px 0px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-  }
+  }  
 }
 
 .btn_action {
@@ -161,7 +158,7 @@
 }
 
 @media(max-width: 1024px) {
-  .ui_intro details{
-    width: auto;
+  .ui_how {
+    flex-wrap: wrap;
   }
 }
