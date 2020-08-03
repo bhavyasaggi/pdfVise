@@ -4,31 +4,31 @@
 # into a single downloadable PDF file.
 combine:
   icon: "/assets/icons/clipboard.svg"
+  link: "/pdf-combine-pages"
   title: "Combine PDF Pages"
   subtitle: "Combine multiple pages of a PDF file or multiple PDF pages together"
-  link: "/pdf-combine-pages"
 merge:
   icon: "/assets/icons/copy.svg"
+  link: "/pdf-merge"
   title: "Merge PDF"
   subtitle: "Merge multiple PDF files together"
-  link: "/pdf-merge"
 remove:
   icon: "/assets/icons/scissors.svg"
+  link: "/pdf-remove-pages"
   title: "Remove PDF Pages"
   subtitle: "Remove multiple pages from a PDF file"
-  link: "/pdf-remove-pages"
 reorder:
   icon: "/assets/icons/sliders.svg"
+  link: "/pdf-reorder"
   title: "Reorder PDF"
   subtitle: "Reorder pages of a PDF file in any order"
-  link: "/pdf-reorder"
 rotate:
   icon: "/assets/icons/refresh-cw.svg"
+  link: "/pdf-rotate"
   title: "Rotate PDF"
   subtitle: "Rotate an entire PDF file or multiple PDF files together."
-  link: "/pdf-rotate"
 rotate_pages:
   icon: "/assets/icons/refresh-ccw.svg"
+  link: "/pdf-rotate-pages"
   title: "Rotate PDF Pages"
   subtitle: "Rotate multiple or individual pages of a PDF file"
-  link: "/pdf-rotate-pages"

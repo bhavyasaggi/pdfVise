@@ -3,7 +3,7 @@
   <input type="file" aria-label="Source File" id="inputFile" accept="application/pdf" {{ include.attr }}/>
 </div>
 <div class="ui_action">    
-  <a href="{{ page.url | absolute_url }}" class="btn_action btn_reload">Reload</a>
-  <div class="btn_action btn_process" id="processFile">Process & Save</div>
+  <a href="{{ page.url | absolute_url }}" class="btn_action btn_reload">{{ site.data.dict["Reload"][page.lang] }}</a>
+  <div class="btn_action btn_process" id="processFile">{{ site.data.dict["Process & Save"][page.lang] }}</div>
 </div>
 <div class="ui_thumb{% if ismeta == 'multiple' %} meta{% endif %}" id="thumbSelect"></div>

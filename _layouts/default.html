@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>    
-    <style>{%- capture default -%}{%- include default.scss -%}{%- endcapture -%}{{- default | scssify -}}</style>
-    {% include head.html %}     
-  </head>
-  <body>
-    {% include header.html %}
-    {% include nav.html %}
-    {{ content }}
-    {% include footer.html %}
-  </body>
-</html>
+<html lang="{{ page.lang }}">
+<head>
+<style>{%- capture default -%}{%- include default.scss -%}{%- endcapture -%}{{- default | scssify -}}</style>
+{%- include head.html -%}
+</head><body>
+{%- include header.html -%}
+{%- include nav.html -%}
+{{- content -}}
+{%- include footer.html -%}
+</body></html>
