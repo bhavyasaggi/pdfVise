@@ -16,25 +16,6 @@
 <script src="https://www.googletagmanager.com/gtag/js?id=UA-172950971-1" async></script>
 <script data-ad-client="ca-pub-9266276505427619" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
 <script>
-window.dataLayer=window.dataLayer||[];
-function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','UA-172950971-1');
-if('serviceWorker' in navigator){
-  window.addEventListener(
-    'load',
-    function(){
-      navigator
-        .serviceWorker
-        .register(
-          '{{ "/service-worker.js" | absolute_url}}'
-        )
-        .then(
-          function(r){
-            r.update();
-          }
-        );
-    }
-  );
-}
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-172950971-1');
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('{{ "/service-worker.js" | absolute_url}}').then(function(r){r.update();});});}
 </script>
